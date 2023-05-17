@@ -1,0 +1,21 @@
+.container {
+  border: 1px solid #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+
+  .equals {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-slate-1);
+    height: 21px;
+  }
+
+  .result {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

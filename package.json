@@ -1,0 +1,57 @@
+{
+  "name": "nautilus",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export -o build",
+    "start": "next start",
+    "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\" \"./**/*.scss\" ./**/*.json README.md .prettierrc",
+    "format:check": "prettier --check .",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{tsx,ts}": [
+      "npm run lint:fix"
+    ],
+    "./**/*.{tsx,ts,css}": [
+      "npm run format"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "babel-plugin-styled-components": "^1.12.0",
+    "bignumber.js": "^9.1.1",
+    "classnames": "^2.3.1",
+    "eslint": "^8.39.0",
+    "next": "^13.3.0",
+    "qs": "^6.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hydration-provider": "^1.0.2",
+    "react-redux": "^8.0.5",
+    "sass": "^1.32.12",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "@types/qs": "^6.9.7",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint-plugin-functional": "^5.0.8",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.1.5"
+  }
+}

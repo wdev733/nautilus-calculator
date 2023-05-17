@@ -1,0 +1,33 @@
+@import '_font.scss';
+
+:root {
+  --bg-slate-0: #272828;
+  --text-slate-0: #fff;
+  --text-slate-1: #babbbb;
+
+  --max-container-width: 1440px;
+}
+
+body {
+  background-color: var(--bg-slate-0);
+  color: var(--text-slate-0);
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Benzin';
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0px;
+  margin: 0px;
+}
